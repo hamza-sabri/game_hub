@@ -10,6 +10,8 @@ class Messages extends Translations {
           'tick tack toe': 'tick tack toe',
           'memory': 'memory',
           'rock paper scissors': 'rock paper scissors',
+          'The winner in the epic war is': 'The winner in the epic war is',
+          'Play again!': 'Play again!',
         },
         'ar': {
           'Game Hub': 'مجمع الألعاب',
@@ -17,7 +19,9 @@ class Messages extends Translations {
           'fingers battle': 'معركة الاصابع',
           'tick tack toe': 'اكس اوه',
           'memory': 'الذاكرة',
-          'rock paper scissors': 'حجر ورقة مقص'
+          'rock paper scissors': 'حجر ورقة مقص',
+          'The winner in the epic war is': 'الفائز في هذه الحرب الملحمية هو ',
+          'Play again!': 'العب مرة اخرى!'
         }
       };
 }

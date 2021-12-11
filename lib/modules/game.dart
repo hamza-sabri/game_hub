@@ -1,4 +1,4 @@
 class Game {
-  final image, name;
-  const Game(this.image, this.name);
+  final String image, name, pageRoute;
+  const Game(this.image, this.name, this.pageRoute);
 }

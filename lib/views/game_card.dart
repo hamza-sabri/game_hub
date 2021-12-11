@@ -3,11 +3,15 @@ import 'package:game_hub/modules/text_styles.dart';
 import 'package:get/get.dart';
 
 class GameCard extends StatelessWidget {
-  final imgPath;
-  final String gameName;
+  final String imgPath, gameName, pageRoute;
   final cardDimension = Get.size.width / 2;
 
-  GameCard({required this.imgPath, required this.gameName});
+  GameCard({
+    required this.imgPath,
+    required this.gameName,
+    required this.pageRoute,
+  });
+
   @override
   Widget build(BuildContext context) {
     return Stack(
@@ -19,25 +23,30 @@ class GameCard extends StatelessWidget {
   }
 
   Widget _cardBuilder() {
-    return Container(
-      width: cardDimension,
-      height: cardDimension,
-      margin: EdgeInsets.all(10),
-      decoration: BoxDecoration(
-        boxShadow: [
-          BoxShadow(
-            color: Colors.grey.withOpacity(0.8),
-            spreadRadius: -2,
-            blurRadius: 12,
-            offset: Offset(4, 4), // changes position of shadow
+    return GestureDetector(
+      onTap: () {
+        Get.toNamed(pageRoute);
+      },
+      child: Container(
+        width: cardDimension,
+        height: cardDimension,
+        margin: EdgeInsets.all(10),
+        decoration: BoxDecoration(
+          boxShadow: [
+            BoxShadow(
+              color: Colors.grey.withOpacity(0.8),
+              spreadRadius: -2,
+              blurRadius: 12,
+              offset: Offset(4, 4), // changes position of shadow
+            ),
+          ],
+        ),
+        child: ClipRRect(
+          borderRadius: BorderRadius.circular(22),
+          child: FittedBox(
+            child: Image.asset(imgPath),
+            fit: BoxFit.fill,
           ),
-        ],
-      ),
-      child: ClipRRect(
-        borderRadius: BorderRadius.circular(22),
-        child: FittedBox(
-          child: Image.asset(imgPath),
-          fit: BoxFit.fill,
         ),
       ),
     );

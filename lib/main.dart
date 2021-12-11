@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:game_hub/bindings/fingers_battle.dart';
 import 'package:game_hub/modules/languages.dart';
+import 'package:game_hub/modules/constants.dart';
+import 'package:game_hub/views/fingers-battle/fingers_battle.dart';
 import 'package:game_hub/views/home.dart';
 import 'package:get/get.dart';
 
@@ -17,7 +20,11 @@ class MyApp extends StatelessWidget {
         GetPage(
           name: '/home',
           page: () => Home(),
-          // binding: HomeBinding(),
+        ),
+        GetPage(
+          name: FINGERS_ROUTE,
+          page: () => FingersBattle(),
+          binding: FingersBinder(),
         ),
       ],
       initialRoute: '/home',
