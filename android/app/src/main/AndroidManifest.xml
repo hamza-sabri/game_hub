@@ -1,7 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.game_hub">
    <application
-        android:label="game_hub"
+        android:label="Hub Of Games"
         android:icon="@mipmap/launcher_icon">
         <activity
             android:name=".MainActivity"
